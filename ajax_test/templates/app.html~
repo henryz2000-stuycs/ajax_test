@@ -1,0 +1,37 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>hi</title>
+  </head>
+
+  <body>
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+
+    <h2>test</h2>
+    
+    input: <br>
+    <input type="text" id="input">
+    <button id="butt">its a button</button>
+    
+  </body>
+</html>
+-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Phrase Sayer</title>
+  </head>
+  <body>
+    <p><input type="text" id="input"></p>
+    <p><button id="butt">Say Phrase</button></p>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="{{ url_for('static', filename='app.js') }}"></script>
+
+  </body>
+</html>

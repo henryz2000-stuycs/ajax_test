@@ -1,0 +1,22 @@
+from flask import Flask, render_template, request, session, redirect, url_for, flash
+import os, csv, sqlite3, hashlib
+import time, json
+#from utils.db_func import *
+
+my_app = Flask(__name__)
+my_app.secret_key = os.urandom(32)
+
+@my_app.route('/', methods=['GET', 'POST'])
+def root():
+        return render_template("app.html")
+
+@my_app.route('/foo', methods=['GET', 'POST'])
+def foo():
+        data = request.args.get("text");
+        print data
+        time.sleep(3)
+        
+        return "hello"        
+
+if __name__ == '__main__':
+        my_app.run(debug = True)

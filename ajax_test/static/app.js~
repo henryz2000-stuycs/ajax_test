@@ -1,0 +1,25 @@
+var button = document.getElementById("butt");
+console.log(button);
+
+var transmit = function(e){
+    var input = document.getElementById("input").value;
+
+    $.ajax({
+	url: "/foo",
+	type: "GET",
+	data: {"text":input},
+	success: function(d){
+	    /*
+	    d = JSON.parse(d);
+	    console.log(d["uc"]);
+	    document.getElementById("h2").innerHTML = d["uc"];
+	    */
+	    console.log(d);
+	    button.innerHTML = d;
+	} //end success callback
+    }); // end ajax call
+}
+
+button.addEventListener('click', transmit);
+
+
